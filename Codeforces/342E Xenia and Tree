@@ -1,0 +1,131 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define SZ 100005
+#define LOGN 17
+
+ll n,m,sz[SZ],dp[18][SZ],level[SZ],par[SZ],ans[SZ];
+bool black[SZ];
+vector <ll> adj[SZ];
+void dfs(ll u){
+    for(int i=0;i<adj[u].size();i++){
+        ll v=adj[u][i];
+        if(!dp[0][v]){
+            dp[0][v]=u;
+            level[v]=level[u]+1;
+            dfs(v);
+        }
+    }
+}
+void preprocess(){
+    dp[0][1]=1;
+    dfs(1);
+    for(int i=1;i<=LOGN;i++){
+        for(int j=1;j<=n;j++){
+            dp[i][j]=dp[i-1][dp[i-1][j]];
+        }
+    }
+}
+
+ll lca(ll u, ll v){
+    if(level[u]>level[v]) swap(u,v);
+    ll d=level[v]-level[u];
+    for(int i=0;i<=LOGN;i++){
+        if(d&(1<<i)){
+            v=dp[i][v];
+        }
+    }
+    if(u==v) return u;
+    for(int i=LOGN;i>=0;i--){
+        if(dp[i][u]!=dp[i][v]){
+            u=dp[i][u],v=dp[i][v];
+        }
+    }
+    return dp[0][u];
+}
+
+ll dist(ll u, ll v){
+    return level[u]+level[v]-2*level[lca(u,v)];
+}
+
+/*----------------------DECOMPOSITION PART-------------------------*/
+void getSize(ll pos, ll par){
+    sz[pos]=1;
+    for(int i=0;i<adj[pos].size();i++){
+        ll v=adj[pos][i];
+        if(black[v] || v==par) continue;
+        getSize(v,pos);
+        sz[pos]+=sz[v];
+    }
+}
+
+ll getCenter(ll pos, ll par, ll szz){
+    for(int i=0;i<adj[pos].size();i++){
+        ll v=adj[pos][i];
+        if(black[v] || v==par) continue;
+        if(2*sz[v]>szz) return getCenter(v,pos,szz);
+    }
+    return pos;
+}
+
+ll Center(ll pos){
+    getSize(pos,0);
+    return getCenter(pos,0,sz[pos]);
+}
+
+void decompose(ll pos, ll parent){
+    ll newCenter = Center(pos);
+    black[newCenter]=1;
+    if(parent==-1) parent=newCenter;
+    par[newCenter]=parent;
+    for(int i=0;i<adj[newCenter].size();i++){
+        ll v=adj[newCenter][i];
+        if(black[v]) continue;
+        decompose(v,newCenter);
+    }
+}
+/*--------------------Query-Update-part-------------------*/
+
+void update(ll u){
+    ll x=u;
+    while(1){
+        ans[x]=min(ans[x],dist(x,u));
+        if(x==par[x]) break;
+        x=par[x];
+    }
+}
+
+ll query(ll u){
+    ll x=u;
+    ll ret=1e18;
+    while(1){
+        ret=min(ret,ans[x]+dist(x,u));
+        if(x==par[x]) break;
+        x=par[x];
+    }
+    return ret;
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie();
+    cin>>n>>m;
+    for(int i=0;i<n-1;i++){
+        ll u,v;
+        cin>>u>>v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    preprocess();
+    decompose(1,-1);
+    for(int i=1;i<=n;i++) ans[i]=1e18;
+    update(1);
+    while(m--){
+        ll t,u;
+        cin>>t>>u;
+        if(t==1) update(u);
+        else cout<<query(u)<<endl;
+    }
+    return 0;
+}
