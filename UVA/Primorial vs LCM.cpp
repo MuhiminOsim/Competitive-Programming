@@ -39,21 +39,8 @@ void preprocess()
     }
     sort(v.begin(),v.end());
     for(int i=1;i<v.size();i++){
-        //cout<<v[i].ff<<" "<<v[i].ss<<endl;
         v[i].ss=(v[i].ss%m*v[i-1].ss%m)%m;
     }
-    //for(int i=0;i<v.size();i++) cout<<v[i].ff<<" "<<v[i].ss<<endl;
-}
-
-ll bigmod(ll x, ll y){
-    ll ret=1;
-    x%=m;
-    while(y){
-        if(y&1) ret=(ret*x)%m;
-        y=y>>1;
-        x=(x*x)%m;
-    }
-    return ret;
 }
 
 int main()
