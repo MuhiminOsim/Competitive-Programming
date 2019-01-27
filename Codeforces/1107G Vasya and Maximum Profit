@@ -1,0 +1,112 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pb push_back
+#define ff first
+#define ss second
+#define maxn 300005
+
+ll rmq[maxn][20],d[maxn],c[maxn];
+ll n,a,ans;
+
+void initRMQ(ll l, ll r){
+    for(int i=l;i<=r;i++) rmq[i][0]=d[i];
+    for(int i=1;i<20;i++){
+        for(int j=l;j<=r;j++){
+            if(j+(1<<(i-1))<=r) rmq[j][i]=max(rmq[j][i-1],rmq[j+(1<<(i-1))][i-1]);
+            else rmq[j][i]=rmq[j][i-1];
+        }
+    }
+}
+
+ll query(ll l, ll r){
+    ll p=log2(r-l+1);
+    return max(rmq[l][p],rmq[r-(1<<p)+1][p]);
+}
+
+struct Data{
+    ll sum, pref, suff, ans;
+};
+
+Data make_Data(ll val){
+    Data d;
+    d.sum=d.pref=d.suff=d.ans=val;
+    return d;
+}
+
+Data combine(Data d1, Data d2){
+    Data d;
+    d.sum=d1.sum+d2.sum;
+    d.pref=max(d1.pref, d1.sum+d2.pref);
+    d.suff=max(d2.suff,d2.sum+d1.suff);
+    d.ans=max(max(d1.ans,d2.ans),d1.suff+d2.pref);
+    return d;
+}
+
+Data tree[4*maxn];
+
+void build(ll pos, ll l, ll r){
+    if(l==r){
+        tree[pos]=make_Data(c[l]); return;
+    }
+    ll mid=(l+r)/2;
+    build(pos*2,l,mid);
+    build(pos*2+1,mid+1,r);
+    tree[pos]=combine(tree[pos*2],tree[pos*2+1]);
+}
+
+Data query(ll pos, ll L, ll R, ll l, ll r){
+    if(R<l || L>r) return make_Data(0);
+    if(L>=l && R<=r) return tree[pos];
+    ll mid=(L+R)/2;
+    Data d1=query(pos*2,L,mid,l,r);
+    Data d2=query(pos*2+1,mid+1,R,l,r);
+    return combine(d1,d2);
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(),cout.tie();
+    cin>>n>>a;
+    for(int i=1;i<=n;i++){
+        cin>>d[i]>>c[i];
+        c[i]=a-c[i];
+        ans=max(ans,c[i]);
+    }
+    for(int i=n;i>=1;i--) d[i]=(d[i]-d[i-1])*(d[i]-d[i-1]);
+    initRMQ(1,n);
+    build(1,1,n);
+    //cout<<"ok"<<endl;
+    for(int i=2;i<=n;i++){
+        ll l1=2,r1=i,l2=i,r2=n,l=i,r=i;
+        ll mx=d[i];
+        while(l1<=r1){
+            ll mid=(l1+r1)/2;
+            //cout<<l1<<" "<<r1<<" "<<mid<<endl;
+            if(query(mid,i)<=mx){
+                l=mid;
+                r1=mid-1;
+            }
+            else l1=mid+1;
+        }
+        while(l2<=r2){
+            ll mid=(l2+r2)/2;
+            if(query(i,mid)<=mx){
+                r=mid;
+                l2=mid+1;
+            }
+            else r2=mid-1;
+        }
+        //cout<<i<<" "<<l<<" "<<r<<endl;
+        l--;
+        Data d1=query(1,1,n,l,i-1);
+        Data d2=query(1,1,n,i,r);
+        ll tmp=c[i]+c[i-1]-d[i];
+        //cout<<"ok "<<d1.suff+d2.pref-d[i]<<endl;
+        if(d1.suff+d2.pref-d[i]>tmp) tmp=d1.suff+d2.pref-d[i];
+        ans=max(ans,tmp);
+    }
+    cout<<ans<<endl;
+    return 0;
+}
