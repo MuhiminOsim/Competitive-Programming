@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ff first
+#define ss second
+#define pb push_back
+
+char T[1000002],P[1000002];
+ll pi[1000002],sz;
+
+void prefixfunction(){
+    ll now;
+    pi[0]=now=-1;
+    for(int i=1;i<sz;i++){
+        while(now!=-1 && P[now+1]!=P[i]) now=pi[now];
+        if(P[now+1]==P[i]) pi[i]=++now;
+        else pi[i]=now=-1;
+    }
+}
+
+ll kmp(){
+    ll now=-1;
+    for(int i=0;i<sz;i++){
+        while(now!=-1 && P[now+1]!=T[i]) now=pi[now];
+        //cout<<i<<endl;
+        if(P[now+1]==T[i]) ++now;
+        else now=-1;
+    }
+    return now+1;
+}
+
+int main()
+{
+//    ios::sync_with_stdio(false);
+//    cin.tie(),cout.tie();
+    ll tst;
+    scanf("%lld",&tst);
+    for(int t=1;t<=tst;t++){
+        scanf("%s",T);
+        sz=strlen(T);
+        for(int i=0,j=sz-1;j>=0;j--,i++) P[i]=T[j];
+        //puts(P),puts(T);
+        prefixfunction();
+        ll matched=kmp();
+        //cout<<matched<<endl;
+        ll ans=sz+sz-matched;
+        printf("Case %d: %lld\n",t,ans);
+    }
+    return 0;
+}
