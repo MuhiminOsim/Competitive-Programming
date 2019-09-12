@@ -1,0 +1,104 @@
+struct CHT_Min{
+    vector <ll> M,C;
+    ll pointer;
+
+    void clear(){
+        M.clear(),C.clear();
+        pointer=0;
+    }
+
+    bool removeCheck(ll id1, ll id2, ll id3){
+        return 1.0*(C[id3]-C[id1])*(M[id1]-M[id2])<1.0*(C[id2]-C[id1])*(M[id1]-M[id3]);
+    }
+
+    void insert_Line(ll m, ll c){ /// if m are increasing, m must be -m
+        M.pb(m),C.pb(c);
+        while(M.size()>=3 && removeCheck((int)M.size()-3, (int)M.size()-2, (int)M.size()-1)){
+            M.erase(M.end()-2);
+            C.erase(C.end()-2);
+        }
+    }
+
+    ll getval(ll id, ll x){
+        return M[id]*x+C[id];
+    }
+
+    ll minValPT(ll x){
+        if(pointer>=M.size()) pointer=M.size()-1;
+        while(pointer<M.size()-1 && M[pointer]*x+C[pointer]>=M[pointer+1]*x+C[pointer+1]) pointer++;
+        return M[pointer]*x+C[pointer];
+    }
+
+    ll minVal(ll x){ /// if m are increasing, x must be -x
+        ll lo=0,hi=(ll)M.size()-1;
+        ll ans=inf;
+        while(lo<=hi){
+            ll mid1=lo+(hi-lo)/3;
+            ll mid2=hi-(hi-lo)/3;
+            ll v1=getval(mid1,x);
+            ll v2=getval(mid2,x);
+            if(v1<v2){
+                ans=min(ans,v1);
+                hi=mid2-1;
+            }
+            else{
+                ans=min(ans,v2);
+                lo=mid1+1;
+            }
+        }
+        return ans;
+    }
+};
+
+struct CHT_Max{
+    vector <ll> M,C;
+    ll pointer;
+
+    void clear(){
+        M.clear(),C.clear();
+        pointer=0;
+    }
+
+    bool removeCheck(ll id1, ll id2, ll id3){
+        return 1.0*(C[id3]-C[id1])*(M[id1]-M[id2])<1.0*(C[id2]-C[id1])*(M[id1]-M[id3]);
+    }
+
+    void insert_Line(ll m, ll c){ /// if m are decreasing, m must be -m
+        if(M.size()>0 && M.back()==m) return;
+        M.pb(m),C.pb(c);
+        while(M.size()>=3 && removeCheck(M.size()-3, M.size()-2, M.size()-1)){
+            M.erase(M.end()-2);
+            C.erase(C.end()-2);
+        }
+    }
+
+    ll getval(ll id, ll x){
+        return M[id]*x+C[id];
+    }
+
+    ll maxValPT(ll x){
+        if(pointer>=M.size()) pointer=M.size()-1;
+        while(pointer<M.size()-1 && M[pointer]*x+C[pointer]<=M[pointer+1]*x+C[pointer+1]) pointer++;
+        return M[pointer]*x+C[pointer];
+    }
+
+    ll maxVal(ll x){ /// if m are decreasing, x must be -x
+        ll lo=0,hi=M.size()-1;
+        ll ans=-1e18;
+        while(lo<=hi){
+            ll mid1=lo+(hi-lo)/3;
+            ll mid2=hi-(hi-lo)/3;
+            ll v1=getval(mid1,x);
+            ll v2=getval(mid2,x);
+            if(v1<v2){
+                ans=max(ans,v2);
+                lo=mid1+1;
+            }
+            else{
+                ans=max(ans,v1);
+                hi=mid2-1;
+            }
+        }
+        return ans;
+    }
+};
