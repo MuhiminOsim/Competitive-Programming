@@ -1,0 +1,13 @@
+int k,prime[mx];
+bool vis[mx];
+
+void sieve(){
+    vis[1]=1;
+    for(int i=2;i<mx;i++){
+        if(!vis[i]) prime[k++]=i;
+        for(int j=0;j<k && i*prime[j]<mx;j++){
+            vis[i*prime[j]]=1;
+            if(i%prime[j]==0) break;
+        }
+    }
+}
