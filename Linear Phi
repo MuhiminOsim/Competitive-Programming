@@ -1,0 +1,17 @@
+int k,prime[mx],phi[mx];
+bool vis[mx];
+
+void Phi(){
+    phi[1]=vis[1]=1;
+    for(int i=2;i<mx;i++){
+        if(!vis[i]) prime[k++]=i,phi[i]=i-1;
+        for(int j=0;j<k && i*prime[j]<mx;j++){
+            vis[i*prime[j]]=1;
+            if(i%prime[j]==0){
+                phi[i*prime[j]]=phi[i]*prime[j];
+                break;
+            }
+            else phi[i*prime[j]]=phi[i]*phi[prime[j]];
+        }
+    }
+}
