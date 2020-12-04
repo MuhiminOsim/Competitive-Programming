@@ -13,6 +13,6 @@ I have been working on problem setting since 2019. Here are some problems of min
 #### Toph Criterion 2020 Round 4 ([Contest Link](https://toph.co/c/criterion-2020-round-4))
 1. [Maximum Meetings](https://toph.co/p/maximum-meetings)
 
-I have also created few problems unofficially for interview preparation platform.
+I have also created few problems unofficially for an interview preparation platform.
 
 N.B. Please feel free to knock me if you find any issues regarding any of the problems.
