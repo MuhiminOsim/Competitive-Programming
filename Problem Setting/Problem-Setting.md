@@ -7,7 +7,7 @@ I started as a problem setter and judge of national contests since January, 2020
 ## Online Contest & Other Onsite Contest Problem Setting:
 I have been working on problem setting since 2019. Here are some problems of mine which have been published in different online and onsite contests so far.
 
-#### Toph Winter Spar 2019 ([Contest Link](https://toph.co/c/tough-winter-spar-2019))
+#### The Toough Winter Spar 2019 ([Contest Link](https://toph.co/c/tough-winter-spar-2019))
 1. [Milad's Lost Tree](https://toph.co/p/milad-s-lost-tree)
 
 #### Toph Criterion 2020 Round 4 ([Contest Link](https://toph.co/c/criterion-2020-round-4))
