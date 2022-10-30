@@ -2,7 +2,7 @@
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
 #### ICPC ASIA DHAKA REGIONAL CONTEST 2021 hosted by BUBT ([Contest Link](https://algo.codemarshal.org/contests/dhaka-21-main))
-1. [Make GCD Great Again!](https://algo.codemarshal.org/contests/dhaka-21-main/problems/G)
+1. [Make GCD Great Again!](https://algo.codemarshal.org/contests/dhaka-21-main/problems/G) ([Drive Link](https://drive.google.com/file/d/1ib3KRxVyhSDZgZ8AuRpSscRqIQVqF6sH/view))
 
 #### National High School Programming Contest (NHSPC) Preliminary Round 2020 ([Contest Link](https://toph.co/c/nhspc2020-preliminary))
 1. [Osim's Maze](https://toph.co/p/osim-s-maze)
