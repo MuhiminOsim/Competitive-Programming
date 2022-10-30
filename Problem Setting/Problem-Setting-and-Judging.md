@@ -7,6 +7,8 @@ I started as a problem setter and judge of national contests since January, 2020
 #### National High School Programming Contest (NHSPC) Preliminary Round 2020 ([Contest Link](https://toph.co/c/nhspc2020-preliminary))
 1. [Osim's Maze](https://toph.co/p/osim-s-maze)
 
+I also contributed as an onsite judge of [RUET CSE FEST 2k22 IUPC](https://algo.codemarshal.org/contests/ruet-2022) and [Cefalo CodeFiesta 2022: AUST IUPC](https://algo.codemarshal.org/contests/aust-2022)
+
 ## Online Contest & Other Onsite Contest Problem Setting:
 I have been working on problem setting since 2019. Here are some problems of mine which have been published in different online and onsite contests so far.
 
