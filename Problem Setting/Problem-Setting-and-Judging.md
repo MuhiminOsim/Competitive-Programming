@@ -1,6 +1,10 @@
 ## National Contest Problem Setting:
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
+#### 2022 ICPC ASIA DHAKA REGIONAL ONLINE PRELIMINARY CONTEST ([Contest Link](https://algo.codemarshal.org/contests/icpc-dhaka-22-preli))
+1. [Cyclic Palindrome](https://algo.codemarshal.org/contests/icpc-dhaka-22-preli/problems/E) ([Drive Link](https://drive.google.com/file/d/1jv_FGANL4KgfedXEYDHnrk7R68iZOE57/view?usp=sharing))
+2. [Image Cropping](https://algo.codemarshal.org/contests/icpc-dhaka-22-preli/problems/I) ([Drive Link](https://drive.google.com/file/d/1jv_FGANL4KgfedXEYDHnrk7R68iZOE57/view?usp=sharing))
+
 #### ICPC ASIA DHAKA REGIONAL CONTEST 2021 hosted by BUBT ([Contest Link](https://algo.codemarshal.org/contests/dhaka-21-main))
 1. [Make GCD Great Again!](https://algo.codemarshal.org/contests/dhaka-21-main/problems/G) ([Drive Link](https://drive.google.com/file/d/1ib3KRxVyhSDZgZ8AuRpSscRqIQVqF6sH/view))
 
