@@ -29,5 +29,3 @@ I have been working on problem setting since 2019. Here are some problems of min
 1. [Show Off!](https://toph.co/p/show-off)
 
 I have also created few problems unofficially for an interview preparation platform.
-
-N.B. Please feel free to knock me if you find any inquiry related problem-setting
