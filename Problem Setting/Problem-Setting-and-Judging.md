@@ -2,10 +2,10 @@
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
 #### ICPC Kanpur-Mathura 2022 Qualifier Round ([Contest Link](https://codedrills.io/contests/icpc-kanpur-mathura-2022-qualifier-round))
-1. [String Generator](https://algo.codemarshal.org/contests/dhaka-22/problems/G) ([Drive Link](https://drive.google.com/file/d/1NFzCSOlW_Y_CpZfcfV6d1gQrVftS-dP5/view?usp=sharing))
+1. [String Generator](https://codedrills.io/contests/icpc-kanpur-mathura-2022-qualifier-round/problems/string-generator)
 
 #### 2022 ICPC ASIA DHAKA REGIONAL CONTEST ([Contest Link](https://algo.codemarshal.org/contests/dhaka-22))
-1. [Jump If You Can](https://codedrills.io/contests/icpc-kanpur-mathura-2022-qualifier-round/problems/string-generator)
+1. [Jump If You Can](https://algo.codemarshal.org/contests/dhaka-22/problems/G) ([Drive Link](https://drive.google.com/file/d/1NFzCSOlW_Y_CpZfcfV6d1gQrVftS-dP5/view?usp=sharing))
 
 #### 2022 ICPC ASIA DHAKA REGIONAL ONLINE PRELIMINARY CONTEST ([Contest Link](https://algo.codemarshal.org/contests/icpc-dhaka-22-preli))
 1. [Cyclic Palindrome](https://algo.codemarshal.org/contests/icpc-dhaka-22-preli/problems/E) ([Drive Link](https://drive.google.com/file/d/1jv_FGANL4KgfedXEYDHnrk7R68iZOE57/view?usp=sharing))
