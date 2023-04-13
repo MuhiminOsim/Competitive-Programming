@@ -1,6 +1,9 @@
 ## National Contest Problem Setting:
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
+#### ICPC Mathura Kanpur 2022 Regional Round ([Contest Link](https://codedrills.io/contests/icpc-mathura-kanpur-2022-regional-round))
+1. [Factorization Game](https://codedrills.io/contests/icpc-mathura-kanpur-2022-regional-round/problems/factorization-game)
+
 #### ICPC Kanpur-Mathura 2022 Qualifier Round ([Contest Link](https://codedrills.io/contests/icpc-kanpur-mathura-2022-qualifier-round))
 1. [String Generator](https://codedrills.io/contests/icpc-kanpur-mathura-2022-qualifier-round/problems/string-generator)
 
