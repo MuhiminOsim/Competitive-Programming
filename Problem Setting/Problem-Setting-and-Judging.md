@@ -1,6 +1,9 @@
 ## National Contest Problem Setting:
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
+#### ICPC PRELIMINARY DHAKA SITE 2023 ([Contest Link](https://bapsoj.org/contests/icpc-preliminary-dhaka-2023))
+1. [Almost Perfect Prime Factor!](https://bapsoj.org/contests/icpc-preliminary-dhaka-2023/problems/A) ([Drive Link](https://drive.google.com/file/d/1pLmlUSO1hApu9fyq67l1r4zuaZmOpt1Z/view))
+
 #### ICPC Mathura Kanpur 2022 Regional Round ([Contest Link](https://codedrills.io/contests/icpc-mathura-kanpur-2022-regional-round))
 1. [Factorization Game](https://codedrills.io/contests/icpc-mathura-kanpur-2022-regional-round/problems/factorization-game)
 
