@@ -2,7 +2,7 @@
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
 #### NCPC ONSITE 2023 HOSTED BY JU ([Contest Link](https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju))
-1. [Make A Beautiful Array](https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/problems/H) ([Drive Link](https://drive.google.com/file/d/1ydTpcR_5t2awpcf7wqehj8ZQ9xTw5yaM/view?usp=sharing))
+1. [Palindromic Subsequence](https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/problems/H) ([Drive Link](https://drive.google.com/file/d/1ydTpcR_5t2awpcf7wqehj8ZQ9xTw5yaM/view?usp=sharing))
 
 #### NCPC PRELIMINARY JU 2023 ([Contest Link](https://bapsoj.org/contests/ncpc-preliminary-ju-2023))
 1. [Make A Beautiful Array](https://bapsoj.org/contests/ncpc-preliminary-ju-2023/problems/C) ([Drive Link](https://drive.google.com/file/d/14A7Fh5nkUJtf6q01sUkK8WpKyR5X7NxB/view?usp=sharing))
