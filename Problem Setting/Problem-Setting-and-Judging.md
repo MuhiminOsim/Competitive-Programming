@@ -1,6 +1,9 @@
 ## National Contest Problem Setting:
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
+#### ICPC PRELIMINARY DHAKA SITE 2024 ([Contest Link]([https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju](https://bapsoj.org/contests/icpc-preliminary-dhaka-site-2024)))
+1. [Network Disentanglement](https://bapsoj.org/contests/icpc-preliminary-dhaka-site-2024/problems/B) ([Drive Link](https://drive.google.com/file/d/1TTscLOfL0UZy8BR1U7TV7nXX8kvsk5v-/view?usp=sharing))
+
 #### NCPC ONSITE 2023 HOSTED BY JU ([Contest Link](https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju))
 1. [Palindromic Subsequence](https://bapsoj.org/contests/ncpc-onsite-2023-hosted-by-ju/problems/H) ([Drive Link](https://drive.google.com/file/d/1ydTpcR_5t2awpcf7wqehj8ZQ9xTw5yaM/view?usp=sharing))
 
