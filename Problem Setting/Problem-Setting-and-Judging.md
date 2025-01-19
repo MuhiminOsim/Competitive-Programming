@@ -1,6 +1,9 @@
 ## National Contest Problem Setting:
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
+#### UIU INTER-UNIVERSITY PROGRAMMING CONTEST 2025 ([Contest Link](https://bapsoj.org/contests/uiu-inter-university-programming-contest-2025))
+1. [Glitch in the Multiverse](https://bapsoj.org/contests/uiu-inter-university-programming-contest-2025/problems/G) ([Drive Link](https://drive.google.com/file/d/1ONK-IV0s0b9_n6WH22CTOnNHmqao96yM/view?usp=sharing))
+
 #### MIAKI PRESENTS KUET IUPC ONSITE 2025 ([Contest Link](https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025))
 1. [Effective Rendering](https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/problems/C) ([Drive Link](https://drive.google.com/file/d/1vGiapKwSxstPCM4rlixOrNX0zZrCwzju/view?usp=drive_link))
 
