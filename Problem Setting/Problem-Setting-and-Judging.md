@@ -1,6 +1,9 @@
 ## National Contest Problem Setting:
 I started as a problem setter and judge of national contests since January, 2020. So far I have created the following problems:
 
+#### NSUCEC CYBERNAUTS IUPC 2026 ([Contest Link](https://bapsoj.org/contests/nsucec-cybernauts-iupc-2026))
+1. [Min-XOR MST](https://bapsoj.org/contests/nsucec-cybernauts-iupc-2026/problems/E) ([Drive Link](https://drive.google.com/file/d/1hqPe9e08kHL3dz8YZEvLD9uyLwmSfNJR/view?usp=sharing))
+
 #### ICPC DHAKA 2025 ONLINE PRELIMINARY ([Contest Link](https://bapsoj.org/contests/icpc-dhaka-2025-online-preliminary))
 1. [The Perfect View](https://bapsoj.org/contests/icpc-dhaka-2025-online-preliminary/problems/E) ([Drive Link](https://drive.google.com/file/d/1RLSE3Dju8ZU32W2iXQC6hvyKFAOXwDbq/view?usp=sharing))
 
